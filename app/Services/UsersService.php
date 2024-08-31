@@ -39,10 +39,10 @@ class UsersService implements UserServiceInterface
     public function register(array $credentials): User
     {
         return User::create([
-            'name' => $data['name'] ?? '',
-            'email' => $data['email'],
-            'company_name' => $data['company_name'],
-            'password' => bcrypt($data['password']),
+            'name' => $credentials['name'] ?? '',
+            'email' => $credentials['email'],
+            'business_name' => $credentials['business_name'],
+            'password' => bcrypt($credentials['password']),
         ]);
     }
 

@@ -25,7 +25,7 @@ class NewAccountRequest extends FormRequest
             'name' => 'required|string|between:2,100',
             'email' => 'required|string|email|max:100|unique:users,email',
             'password' => 'required|string|confirmed|min:6',
-            'company_name' => 'required|string|between:2,100',
+            'business_name' => 'required|string|between:2,100,unique:users,business_name',
         ];
     }
 
