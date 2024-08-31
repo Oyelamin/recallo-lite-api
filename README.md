@@ -12,10 +12,12 @@
 ## Installation && Setup
 Here's a guide on how you can setup the application:
   >  - Clone repo
-  >  - Run composer install
-  >  - cp .env.example .env
-  >  - php artisan key:generate
-  >  - php artisan jwt:secret
+  >  - Run: `composer install`
+  >  - Run: `cp .env.example .env`
+  >  - Run: `php artisan key:generate`
+  >  - Run: `php artisan jwt:secret`
+  >  - Update database credentials in the .env file
+  >  - Run: `php artisan migrate --seed` to run migrations and seed dummy data in table
 
 
 ## Running Application
