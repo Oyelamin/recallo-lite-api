@@ -27,4 +27,11 @@ class LoginRequest extends FormRequest
             'allow_30_days' => ['nullable', 'boolean'],
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'email.exists' => 'Invalid email/password. Kindly provide valid credentials to proceed.',
+        ];
+    }
 }

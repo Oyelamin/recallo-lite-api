@@ -28,4 +28,11 @@ class NewAccountRequest extends FormRequest
             'company_name' => 'required|string|between:2,100',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'email.unique' => 'Email already exists. Kindly login with your credentials.',
+        ];
+    }
 }
