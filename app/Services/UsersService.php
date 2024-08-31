@@ -16,6 +16,7 @@ use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 
 class UsersService implements UserServiceInterface
 {
+    private static string $guard = 'api';
     public function login(array $credentials): array
     {
         $allow30Days = $credentials['allow_30_days'] ?? false;
